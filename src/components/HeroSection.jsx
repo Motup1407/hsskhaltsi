@@ -4,7 +4,7 @@ import schoolcover from '../assets/coverImage1.jpg';
 const HeroSection = () => {
   return (
     <section className="relative h-screen w-screen flex items-center justify-center" style={{
-        backgroundImage:'url("coverImage1.jpg")',
+        backgroundImage:{schoolcover},
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>
