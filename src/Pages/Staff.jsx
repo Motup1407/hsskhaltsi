@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 import { Users, UserIcon as Male, UserIcon as Female, User } from 'lucide-react';
+import staffdata from '/hsskhaltsi/src/Files/staffData.csv';
 
 const Staff = () => {
   const [staffData, setStaffData] = useState({
@@ -15,7 +16,7 @@ const Staff = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/hsskhaltsi/src/Files/staffData.csv');
+        const response = await fetch({staffdata});
         const reader = response.body.getReader();
         const result = await reader.read();
         const decoder = new TextDecoder('utf-8');
