@@ -15,7 +15,7 @@ const Staff = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('hsskhaltsi/src/Files/staffData.csv');
+        const response = await fetch('hsskhaltsi/staffData.csv');
         const reader = response.body.getReader();
         const result = await reader.read();
         const decoder = new TextDecoder('utf-8');
@@ -57,10 +57,7 @@ const Staff = () => {
     <section className='bg-primary-50'>
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold text-center text-gray-800 mt-20 mb-12">School Human Resource Hierarchical Structure</h1>
-      
-      
-      
-
+            
       <div className=" overflow-x-auto">
         <svg className="w-full" viewBox="0 0 1000 600">
           {/* Principal to Teaching Staff line */}
