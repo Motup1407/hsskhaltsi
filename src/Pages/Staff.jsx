@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
-import { Users, UserIcon as Male, UserIcon as Female } from 'lucide-react';
+import { Users, UserIcon as Male, UserIcon as Female, User } from 'lucide-react';
 
 const Staff = () => {
   const [staffData, setStaffData] = useState({
     total: 0,
-    male: 0,
-    female: 0
+    Teachihng: 0,
+    NonTeaching: 0
   });
   const [staffTable, setStaffTable] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -15,7 +15,7 @@ const Staff = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('../src/Files/staffData.csv');
+        const response = await fetch('hsskhaltsi/src/Files/staffData.csv');
         const reader = response.body.getReader();
         const result = await reader.read();
         const decoder = new TextDecoder('utf-8');
@@ -59,36 +59,17 @@ const Staff = () => {
       <h1 className="text-3xl font-bold text-center text-gray-800 mt-20 mb-12">School Human Resource Hierarchical Structure</h1>
       
       
-      <div className="bg-white rounded-lg shadow-2xl p-6 mb-12">
-        <h2 className="text-2xl font-semibold text-gray-700 mb-4">Total Staff</h2>
-        <div className="flex justify-around items-center">
-          <div className="text-center">
-            <Users className="w-12 h-12 mx-auto text-blue-600 mb-2" />
-            <p className="text-4xl font-bold text-blue-600">{staffData.total}</p>
-            <p className="text-gray-600">Total</p>
-          </div>
-          <div className="text-center">
-            <Male className="w-12 h-12 mx-auto text-green-600 mb-2" />
-            <p className="text-4xl font-bold text-green-600">{staffData.male}</p>
-            <p className="text-gray-600">Male</p>
-          </div>
-          <div className="text-center">
-            <Female className="w-12 h-12 mx-auto text-pink-600 mb-2" />
-            <p className="text-4xl font-bold text-pink-600">{staffData.female}</p>
-            <p className="text-gray-600">Female</p>
-          </div>
-        </div>
-      </div>
+      
 
       <div className=" overflow-x-auto">
-        <svg className="w-full" viewBox="0 0 1000 800">
+        <svg className="w-full" viewBox="0 0 1000 600">
           {/* Principal to Teaching Staff line */}
           <line x1="500" y1="50" x2="250" y2="150" stroke="#4B5563" strokeWidth="2" />
           {/* Principal to Non-Teaching Staff line */}
           <line x1="500" y1="50" x2="750" y2="150" stroke="#4B5563" strokeWidth="2" />
           
           {/* Teaching Staff to positions lines */}
-          <line x1="250" y1="160" x2="250" y2="180" stroke="#4B5563" strokeWidth="2" />
+          <line x1="250" y1="150" x2="250" y2="180" stroke="#4B5563" strokeWidth="2" />
           <line x1="250" y1="220" x2="250" y2="240" stroke="#4B5563" strokeWidth="2" />
           <line x1="250" y1="280" x2="250" y2="300" stroke="#4B5563" strokeWidth="2" />
           <line x1="250" y1="340" x2="250" y2="360" stroke="#4B5563" strokeWidth="2" />
@@ -137,7 +118,27 @@ const Staff = () => {
           ))}
         </svg>
       </div>
-      <div className="bg-gradient-to-r from-green-300 to-orange-300 rounded-lg shadow-lg p-6 mb-12">
+      <div className="bg-white rounded-lg shadow-2xl p-6 mb-12">
+        <h2 className="text-2xl font-semibold text-gray-700 mb-4">Total Staff</h2>
+        <div className="flex justify-around items-center">
+          <div className="text-center">
+            <Users className="w-12 h-12 mx-auto text-blue-600 mb-2" />
+            <p className="text-4xl font-bold text-blue-600">{staffData.total}</p>
+            <p className="text-gray-600">Total</p>
+          </div>
+          <div className="text-center">
+            <Male className="w-12 h-12 mx-auto text-green-600 mb-2" />
+            <p className="text-4xl font-bold text-green-600">{staffData.Teachihng}</p>
+            <p className="text-gray-600">Teaching</p>
+          </div>
+          <div className="text-center">
+            <Female className="w-12 h-12 mx-auto text-pink-600 mb-2" />
+            <p className="text-4xl font-bold text-pink-600">{staffData.NonTeaching}</p>
+            <p className="text-gray-600">Non-Teaching</p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-gradient-to-r from-green-300 to-orange-300 rounded-lg shadow-lg p-6 mb-12 mt-0">
         <h2 className="text-2xl font-semibold text-white mb-4">Staff Details</h2>
         <div className="overflow-x-auto bg-white rounded-lg shadow">
           <table className="min-w-full divide-y divide-blue-200">
