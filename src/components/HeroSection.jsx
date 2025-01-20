@@ -1,4 +1,5 @@
 import React from 'react'
+import schoolcover from '../assets/coverImage1.jpg';
 
 const HeroSection = () => {
   return (
@@ -7,7 +8,7 @@ const HeroSection = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>
-        <img src='hsskhaltsi/src/assets/coverImage1.jpg' />
+        <img src={schoolcover} alt='herocover'/>
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div className="relative text-center text-white px-4 z-index-1">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 text-primary-400">Welcome to Our School</h1>
