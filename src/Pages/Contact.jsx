@@ -54,7 +54,7 @@ const Contact = () => {
               <FiPhone className="text-primary-500" size={24} />
               <div>
                 <h3 className="font-medium text-gray-900">Phone</h3>
-                <p className="text-gray-600">+1 9596740166</p>
+                <p className="text-gray-600">+91 - 9596740166</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">

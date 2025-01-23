@@ -11,7 +11,7 @@ const Footer = () => {
           <div data-aos="fade-up" data-aos-delay="100">
             <h3 className="text-xl font-bold mb-4">About Us</h3>
             <p className="text-primary-100">
-              We are dedicated to providing exceptional services and creating meaningful experiences for our customers.
+            Our school is dedicated and committed to providing exceptional service in the field of education, imparting knowledge in academics and extracurricular activities through innovative methodologies and leveraging digital advancements.
             </p>
           </div>
 
@@ -46,7 +46,7 @@ const Footer = () => {
               </p>
               <p className="flex items-center text-primary-100">
                 <FiPhone className="mr-2" size={18}/>
-                +1 9596740166
+                +91 - 9596740166
               </p>
               <p className="flex items-center text-primary-100">
                 <FiMapPin className="mr-2" size={20} />

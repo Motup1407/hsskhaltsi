@@ -4,9 +4,9 @@ import { Users, UserIcon as Male, UserIcon as Female, User } from 'lucide-react'
 
 const Staff = () => {
   const [staffData, setStaffData] = useState({
-    total: 0,
-    Teachihng: 0,
-    NonTeaching: 0
+    total: 34,
+    Teaching: 22,
+    NonTeaching: 12
   });
   const [staffTable, setStaffTable] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -23,11 +23,11 @@ const Staff = () => {
         const parsedData = Papa.parse(csv, { header: true });
         
         setStaffTable(parsedData.data);
-        setStaffData({
+        /*setStaffData({
           total: parsedData.data.length,
           Teaching: Math.floor(parsedData.data.length * 0.6), // Dummy calculation
           NonTeaching: Math.ceil(parsedData.data.length * 0.4) // Dummy calculation
-        });
+        });*/
         setIsLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -125,7 +125,7 @@ const Staff = () => {
           </div>
           <div className="text-center">
             <Male className="w-12 h-12 mx-auto text-green-600 mb-2" />
-            <p className="text-4xl font-bold text-green-600">{staffData.Teachihng}</p>
+            <p className="text-4xl font-bold text-green-600">{staffData.Teaching}</p>
             <p className="text-gray-600">Teaching</p>
           </div>
           <div className="text-center">
