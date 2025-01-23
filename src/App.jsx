@@ -18,11 +18,11 @@ const App=() => {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route index element={<Home/>}/>
         <Route path='/About' element={<About/>}/>
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/Staff' element={<Staff/>}/>
       </Routes>
-      <Home/>
       <ScrollTop/>
       <Footer />
     </div>
