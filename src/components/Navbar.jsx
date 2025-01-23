@@ -68,7 +68,7 @@ const Navbar = () => {
               : 'bg-primary-700 text-black-400'
             }`}>
               <div className='flex flex-col item-end'>
-                <span className='font-semibold'>Affiliation No: 3720143</span>
+                <span className='font-semibold'>CBSE Affiliation No: 3720143</span>
                 <span className='font-semibold'>School Code: 24496</span>
               </div>              
             </div>

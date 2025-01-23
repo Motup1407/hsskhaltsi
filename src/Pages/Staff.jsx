@@ -25,8 +25,8 @@ const Staff = () => {
         setStaffTable(parsedData.data);
         setStaffData({
           total: parsedData.data.length,
-          male: Math.floor(parsedData.data.length * 0.6), // Dummy calculation
-          female: Math.ceil(parsedData.data.length * 0.4) // Dummy calculation
+          Teaching: Math.floor(parsedData.data.length * 0.6), // Dummy calculation
+          NonTeaching: Math.ceil(parsedData.data.length * 0.4) // Dummy calculation
         });
         setIsLoading(false);
       } catch (error) {
@@ -56,7 +56,7 @@ const Staff = () => {
   return (
     <section className='bg-primary-50'>
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mt-20 mb-12">School Human Resource Hierarchical Structure</h1>
+      <h1 className="text-3xl font-bold text-center text-gray-800 mt-20 mb-12">School's Hierarchical Structure of Posts</h1>
             
       <div className=" overflow-x-auto">
         <svg className="w-full" viewBox="0 0 1000 600">

@@ -15,7 +15,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
-                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary-500 focus:ring-primary-500"
+                  className="mt-1 block w-full rounded-md border-gray-700 shadow-sm focus:border-primary-500 focus:ring-primary-500"
                 />
               </div>
               <div>

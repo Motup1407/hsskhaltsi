@@ -22,9 +22,8 @@ const About = () => {
             <div data-aos="fade-left">
               
               <p className="text-gray-600 mb-6 text-lg">
-                Our School is affiliated to CBSE under affiliation NO:3720143. Our School run and govern by the School Education Department, 
-                Union Territory of Ladakh. It is located in the heart of Khaltsi Block which has been catering the Students of remotest areas of the Block, 
-                as well as near by villages.
+                Our School is affiliated to CBSE under affiliation N. 3720143. Our School is run and governed by the School Education Department, 
+                Union Territory of Ladakh. It is located in khaltsi Leh Ladakh, catering to students from the remotest areas of the Khaltsi block as well as nearby villages.
                 
               </p>
               <div className="grid grid-cols- gap-6 mb-8">
@@ -45,10 +44,6 @@ const About = () => {
                 <div className="bg-primary-50 px-6 py-3 rounded-full">
                   <span className="font-bold text-primary-600">160+</span>
                   <span className="text-gray-600 ml-2">Students</span>
-                </div>
-                <div className="bg-primary-50 px-6 py-3 rounded-full">
-                  <span className="font-bold text-primary-600">100%</span>
-                  <span className="text-gray-600 ml-2">Satisfaction</span>
                 </div>
               </div>
               <div className="flex gap-4 mt-10">
