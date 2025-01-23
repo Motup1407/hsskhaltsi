@@ -22,6 +22,7 @@ const App=() => {
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/Staff' element={<Staff/>}/>
       </Routes>
+      <Home/>
       <ScrollTop/>
       <Footer />
     </div>
