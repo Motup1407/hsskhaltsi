@@ -6,6 +6,7 @@ import HeroSection from '../components/HeroSection';
 import Noty from '../components/Noty';
 import Enroll from '../components/Enroll';
 import About from './About';
+import Gallery from '../components/galleryCom';
 
 const Home = () => {
     useEffect(() => {
@@ -56,7 +57,9 @@ const Home = () => {
       </section>
 
       {/* About Us Section */}
+
       <About/>
+      <Gallery/>
 
       {/* Social Media Section */}
       <section className="py-20 bg-primary-100">
