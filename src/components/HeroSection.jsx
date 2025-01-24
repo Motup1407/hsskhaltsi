@@ -3,7 +3,7 @@ import React from 'react'
 const HeroSection = () => {
   return (
     <section className="relative h-screen w-screen flex items-center justify-center" style={{
-        backgroundImage:'url(../../src/assets/hero.jpg)',
+        backgroundImage:'url(../../hero.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>
