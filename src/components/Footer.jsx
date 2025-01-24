@@ -3,6 +3,13 @@ import { FiFacebook,FiTwitter,FiInstagram,FiPhone,FiMail,FiMapPin } from "react-
 import { NavLink,Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
+const Quickmenu=[
+  {name:'Home', path:"/"},
+  {name:'About', path:"/about"},
+  {name:'Staff', path:"/Staff"},
+  {name:'Contact', path:"/Contact"},
+];
+
   return (
     <footer className="bg-green-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -19,13 +26,7 @@ const Footer = () => {
           <div data-aos="fade-up" data-aos-delay="200">
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {[
-                {name:'Home',path:'/'},
-                {name:'About',path:'/About'},
-                {name:'Staff',path:'/Staff'},
-                {name:'Contact',path:'/Contact'}
-              
-              ].map((item) => (
+              {Quickmenu.map(item => (
                 <li>
                   <NavLink key={item.name}
                   to={item.path} className="text-primary-100 hover:text-white transition-colors">
