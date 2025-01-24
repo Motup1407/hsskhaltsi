@@ -45,7 +45,7 @@ const galleryCom = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary-900 mb-4" data-aos="fade-up">Our Gallery</h2>
-            <p className="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="100">Capturing moments that inspire</p>
+            <p className="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="100">Capturing inspiring moments of our school.</p>
           </div>
           
           {/* Grid Gallery */}
