@@ -42,10 +42,10 @@ const galleryCom = () => {
     <>
      {/* Gallery Section */}
      <section className="py-20 bg-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary-900 mb-4" data-aos="fade-up">Our Gallery</h2>
-            <p className="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="100">Capturing inspiring moments of our school.</p>
+            <p className="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="100">Capturing the inspiring moments of our school.</p>
           </div>
           
           {/* Grid Gallery */}
@@ -70,7 +70,7 @@ const galleryCom = () => {
           </div>
 
           {/* Marquee Gallery with Controls */}
-          <div className="relative " data-aos="fade-up">
+          <div className="relative mt-30"  data-aos="fade-up">
             {/* Marquee Container */}
             <div 
               className={`relative overflow-hidden ${isPaused ? 'hover:cursor-grab active:cursor-grabbing' : ''}`}
