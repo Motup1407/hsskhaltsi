@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react'
-import { ArrowRight, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { ArrowRight, Facebook, Twitter, Instagram, Linkedin} from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import HeroSection from '../components/HeroSection';
 import Noty from '../components/Noty';
 import Enroll from '../components/Enroll';
 import About from './About';
 import Gallery from '../components/galleryCom';
+import HeroCarousel from '../components/HeroCarousel';
 
 const Home = () => {
     useEffect(() => {
@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <HeroSection/>
+      <HeroCarousel/>
       {/*Notifications Section*/}
     <Noty/>
     <Enroll/>
