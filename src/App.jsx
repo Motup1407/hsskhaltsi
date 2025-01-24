@@ -7,6 +7,7 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Staff from './Pages/Staff';
 import Contact from './Pages/Contact'
+import Gallery from './Pages/Gallery';
 import ScrollTop from './components/scrollTop'
 
 
@@ -22,6 +23,7 @@ const App=() => {
         <Route path='/About' element={<About/>}/>
         <Route path='/Contact' element={<Contact/>}/>
         <Route path='/Staff' element={<Staff/>}/>
+        <Route path='/Gallery' element={<Gallery/>}/>
       </Routes>
       <ScrollTop/>
       <Footer />

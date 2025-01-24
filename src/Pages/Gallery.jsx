@@ -4,7 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 
-const galleryCom = () => {
+const Gallery = () => {
     const [isPaused, setIsPaused] = useState(false);
     const [speed, setSpeed] = useState(1);
     useEffect(() => {
@@ -15,7 +15,16 @@ const galleryCom = () => {
         });
       }, []);
     
-  
+   // Gallery images with different spans
+  const galleryImages = [
+    { url: '/hsskhaltsi/assets/1.jpg', span: 'col-span-2 row-span-2' },
+    { url: '/hsskhaltsi/assets/2.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/3.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/4.jpg', span: 'row-span-2' },
+    { url: '/hsskhaltsi/assets/5.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/6.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/7.jpg', span: 'col-span-1' }
+  ];
 
   // Marquee images
   const marqueeImages = [
@@ -36,13 +45,32 @@ const galleryCom = () => {
     <>
      {/* Gallery Section */}
      <section className="py-20 bg-gray-200">
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary-900 mb-4" data-aos="fade-up">Our Gallery</h2>
             <p className="text-xl text-gray-600" data-aos="fade-up" data-aos-delay="100">Capturing the inspiring moments of our school.</p>
           </div>
           
-       
+          {/* Grid Gallery */}
+          <div className="grid grid-cols-4 gap-4 mb-16 " data-aos="fade-up">
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className={`${image.span} relative group overflow-hidden rounded-lg`}
+              >
+                <img
+                  src={image.url}
+                  alt={`Gallery image ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-opacity duration-500 flex items-center justify-center">
+                  <span className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    View Image
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
 
           {/* Marquee Gallery with Controls */}
           <div className="relative mt-30"  data-aos="fade-up">
@@ -113,4 +141,4 @@ const galleryCom = () => {
   );
 };
 
-export default galleryCom ;
+export default Gallery ;

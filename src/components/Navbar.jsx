@@ -42,7 +42,8 @@ const Navbar = () => {
                 { name: 'Home', path: '/' },
                 { name: 'About', path: '/About' },
                 { name: 'Staff', path: '/Staff' },
-                { name: 'Contact', path: '/Contact' }
+                { name: 'Contact', path: '/Contact' },
+                { name: 'Gallery', path: '/Gallery' }
               ].map((item) => (
                 <NavLink
                   key={item.name}
