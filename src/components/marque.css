@@ -1,6 +1,6 @@
 .marquee {
     display: inline-block;
-    animation: scroll-vertical 5s linear infinite;
+    animation: scroll-vertical 15s linear infinite;
   }
   
   @keyframes scroll-vertical {

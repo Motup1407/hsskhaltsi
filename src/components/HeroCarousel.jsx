@@ -7,18 +7,23 @@ const HeroCarousel = () => {
     const heroSlides = [
         {
           image: '/hsskhaltsi/assets/hero1.jpg',
-          title: 'Welcome to Our Website',
+          title: 'Welcome to Our School',
           subtitle: 'Discover amazing experiences with us'
         },
         {
           image: '/hsskhaltsi/assets/hero2.jpg',
           title: 'Innovative Solutions',
-          subtitle: 'Creating the future together'
+          subtitle: 'Preparing for the future'
         },
         {
-          image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=2070&h=1200',
-          title: 'Excellence in Service',
-          subtitle: 'Committed to your success'
+          image: '/hsskhaltsi/assets/hero4.jpg',
+          title: 'Dedicated and Qualified Teachers',
+          subtitle: 'Committed to provide best knowledge and ethics'
+        },
+        {
+          image: '/hsskhaltsi/assets/hero3.jpg',
+          title: 'Residential Hostel Facilities',
+          subtitle: 'Providing free residential hostel'
         }
       ];
 

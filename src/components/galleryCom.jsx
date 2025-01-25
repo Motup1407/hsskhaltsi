@@ -13,7 +13,7 @@ const galleryCom = () => {
           once: true,
           easing: 'ease-out-cubic'
         });
-      }, []);
+      });
     
   
 
