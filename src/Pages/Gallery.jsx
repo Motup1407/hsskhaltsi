@@ -30,16 +30,20 @@ const Gallery = () => {
     { url: '/hsskhaltsi/assets/hero5.jpg', span: 'col-span-1' },
     { url: '/hsskhaltsi/assets/1.jpg', span: 'col-span-1' },
     { url: '/hsskhaltsi/assets/4.jpg', span: 'row-span-2' },
-    { url: '/hsskhaltsi/assets/5.jpg', span: 'col-span-1' },
-    { url: '/hsskhaltsi/assets/7.jpg', span: 'col-span-1' }
+    { url: '/hsskhaltsi/assets/plantation1.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/7.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/ICT-Lab.jpg', span: 'row-span-2' },
+    { url: '/hsskhaltsi/assets/Hostel.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/hero6.jpg', span: 'row-span-2 col-span-1' },
+    { url: '/hsskhaltsi/assets/Painting1.jpg', span: 'col-span-1' },
   ];
 
   // Marquee images
   const marqueeImages = [
     '/hsskhaltsi/assets/1.jpg',
-    '/hsskhaltsi/assets/2.jpg',
-    '/hsskhaltsi/assets/3.jpg',
-    '/hsskhaltsi/assets/4.jpg',
+    '/hsskhaltsi/assets/ICT-Lab.jpg',
+    '/hsskhaltsi/assets/plantation2.jpg',
+    '/hsskhaltsi/assets/painting2.jpg',
     '/hsskhaltsi/assets/5.jpg',
     '/hsskhaltsi/assets/6.jpg',
     '/hsskhaltsi/assets/7.jpg'
