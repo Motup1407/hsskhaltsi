@@ -35,7 +35,7 @@ const galleryCom = () => {
   return (
     <>
      {/* Gallery Section */}
-     <section className="py-20 bg-gray-200">
+     <section className="py-20 bg-gray-100">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-primary-900 mb-4" data-aos="fade-up">Our Gallery</h2>

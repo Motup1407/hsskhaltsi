@@ -17,12 +17,20 @@ const Gallery = () => {
     
    // Gallery images with different spans
   const galleryImages = [
-    { url: '/hsskhaltsi/assets/1.jpg', span: 'col-span-2 row-span-2' },
+    { url: '/hsskhaltsi/assets/hero4.jpg', span: 'col-span-2 row-span-2' },
     { url: '/hsskhaltsi/assets/2.jpg', span: 'col-span-1' },
     { url: '/hsskhaltsi/assets/3.jpg', span: 'col-span-1' },
-    { url: '/hsskhaltsi/assets/4.jpg', span: 'row-span-2' },
+    { url: '/hsskhaltsi/assets/hero2.jpg', span: 'row-span-2 col-span-2' },
     { url: '/hsskhaltsi/assets/5.jpg', span: 'col-span-1' },
     { url: '/hsskhaltsi/assets/6.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/hero1.jpg', span: 'col-span-2 row-span-2' },
+    { url: '/hsskhaltsi/assets/2.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/3.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/hero3.jpg', span: 'row-span-2' },
+    { url: '/hsskhaltsi/assets/hero5.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/1.jpg', span: 'col-span-1' },
+    { url: '/hsskhaltsi/assets/4.jpg', span: 'row-span-2' },
+    { url: '/hsskhaltsi/assets/5.jpg', span: 'col-span-1' },
     { url: '/hsskhaltsi/assets/7.jpg', span: 'col-span-1' }
   ];
 
