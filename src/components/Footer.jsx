@@ -4,10 +4,10 @@ import { NavLink,Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
 const Quickmenu=[
-  {name:'Home', path:"/"},
-  {name:'About', path:"/about"},
-  {name:'Staff', path:"/Staff"},
-  {name:'Contact', path:"/Contact"},
+  {name:'Home', path:"/hsskhaltsi"},
+  {name:'About', path:"/hsskhaltsi/about"},
+  {name:'Staff', path:"/hsskhaltsi/Staff"},
+  {name:'Contact', path:"/hsskhaltsi/Contact"},
 ];
 
   return (
