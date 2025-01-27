@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import { Menu, X, Leaf } from 'lucide-react';
+import { Menu, X} from 'lucide-react';
 import logo from '../assets/LOGO.png'
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isHomePage = location.pathname === '/';
+  const isHomePage = location.pathname === '/hsskhaltsi';
   const shouldBeTransparent = isHomePage && !isScrolled;
 
   return (
