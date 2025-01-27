@@ -60,7 +60,7 @@ const HeroCarousel = () => {
     {/* Hero Section with Carousel */}
       <section className="relative h-screen">
         {/* Carousel Container */}
-        <div className="relative h-full overflow-hidden">
+        <div className="relative h-screen overflow-hidden">
           {heroSlides.map((slide, index) => (
             <div
               key={index}
