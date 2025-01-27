@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import '../components/marque.css';
 import { FaNewspaper, FaBell, FaCalendarAlt, FaRegFilePdf } from "react-icons/fa";
 import { HiOutlineBellAlert } from "react-icons/hi2";
-import { PiFilesBold } from "react-icons/pi";
+import { TbPhotoSearch } from "react-icons/tb";
 
 const Noty = () => {
 
@@ -13,6 +13,8 @@ const Noty = () => {
   const News=[
     {title:'News1',path:''},
     {title:'News2',path:''},
+    {title:'News3',path:''},
+    {title:'News3',path:''},
     {title:'News3',path:''}
 ];
 const Notices=[
@@ -39,12 +41,12 @@ const Events=[
             <h2 className="text-xl font-semibold">News & Alerts</h2>
           </div >
           <div className="">
-            <div className={`overflow-hidden h-40 ${isPaused ? 'active:cursor-grabbing' : ''}`}
+            <div className={`overflow-hidden h-56 ${isPaused ? 'active:cursor-grabbing' : ''}`}
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}>
-              <ul className={`space-y-2  h-50 ${isPaused?'':`marquee`}`}>
+              <ul className={`space-y-2 ${isPaused?'':`marquee`}`}>
                 {News.map(item =>(                  
-                  <li className='flex items-center gap-1 px-6 hover:bg-blue-300'>
+                  <li className='flex items-center gap-1 px-6 hover:bg-gray-800'>
                     <HiOutlineBellAlert className='text-yellow-400 text-lg' />
                   <a href={item.path} className="text-white text-md">
                     {item.title}
@@ -64,12 +66,12 @@ const Events=[
             <h2 className="text-xl font-semibold">Notifications (CBSE/School)</h2>
           </div>
           <div className="">
-          <div className={`overflow-hidden h-40 ${isPaused1 ? 'active:cursor-grabbing' : ''}`}
+          <div className={`overflow-hidden h-56 ${isPaused1 ? 'active:cursor-grabbing' : ''}`}
               onMouseEnter={() => setIsPaused1(true)}
               onMouseLeave={() => setIsPaused1(false)}>
               <ul className={`space-y-2 ${isPaused1?'':`marquee`}`}>
                  {Notices.map(item =>(                  
-                  <li className='flex items-center gap-1 px-6 hover:bg-orange-300'>
+                  <li className='flex items-center gap-1 px-6 hover:bg-gray-800'>
                     <FaRegFilePdf className='text-red-800 text-lg'/>
                   <a href={item.path} className="text-white text-md">
                     {item.title}
@@ -89,13 +91,13 @@ const Events=[
             <h2 className="text-xl font-semibold">Events</h2>
           </div>
           <div className=''>
-          <div className={`overflow-hidden h-40 ${isPaused2 ? 'active:cursor-grabbing' : ''}`}
+          <div className={`overflow-hidden h-56 ${isPaused2 ? 'active:cursor-grabbing' : ''}`}
               onMouseEnter={() => setIsPaused2(true)}
               onMouseLeave={() => setIsPaused2(false)}>
-              <ul className={`space-y-2 ${isPaused2?'':`marquee`}`}>
+              <ul className={`space-y-2  ${isPaused2?'':`marquee`}`}>
                 {Events.map(item =>(
-                  <li className='flex items-center gap-1 px-6 hover:bg-green-300'>
-                    <PiFilesBold className='text-red-800 text-lg'/>
+                  <li className='flex items-center gap-1 px-6 hover:bg-gray-800'>
+                    <TbPhotoSearch className='text-red-800 text-lg'/>
                   <a href={item.path} className="text-white text-md">
                     {item.title}
                   </a>
