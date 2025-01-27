@@ -1,5 +1,5 @@
-import React, {useState,useEffect} from 'react'
-import { ArrowRight, ArrowLeft} from 'lucide-react';
+import React, {useState,useEffect} from 'react';
+import { FaCircleArrowLeft, FaCircleArrowRight } from "react-icons/fa6";
 
 const HeroCarousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -107,13 +107,13 @@ const HeroCarousel = () => {
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition-all duration-300 group"
           >
-            <ArrowLeft size={24} className="group-hover:-translate-x-1 transition-transform duration-300" />
+            <FaCircleArrowLeft size={24} className="group-hover:-translate-x-1 transition-transform duration-300" />
           </button>
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition-all duration-300 group"
           >
-            <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform duration-300" />
+            <FaCircleArrowRight size={24} className="group-hover:translate-x-1 transition-transform duration-300" />
           </button>
 
           {/* Slide Indicators */}

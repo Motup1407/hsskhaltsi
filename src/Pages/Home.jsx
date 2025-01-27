@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react'
-import { ArrowRight, Facebook, Twitter, Instagram, Linkedin} from 'lucide-react';
+import React, {useEffect} from 'react';
+import { FiFacebook, FiTwitter,FiInstagram } from "react-icons/fi";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Noty from '../components/Noty';
@@ -48,15 +48,14 @@ const Home = () => {
           <h2 className="text-4xl font-bold mb-12 text-primary-900" data-aos="fade-up">Connect With Us</h2>
           <div className="flex justify-center space-x-8">
             <a href="#" className="text-primary-600 hover:text-primary-700 transition-colors" data-aos="fade-up" data-aos-delay="100">
-              <Facebook size={32} />
+              <FiFacebook size={32} />
             </a>
             <a href="#" className="text-primary-600 hover:text-primary-700 transition-colors" data-aos="fade-up" data-aos-delay="200">
-              <Twitter size={32} />
+              <FiTwitter size={32} />
             </a>
             <a href="#" className="text-primary-600 hover:text-primary-700 transition-colors" data-aos="fade-up" data-aos-delay="300">
-              <Instagram size={32} />
-            </a>
-            
+              <FiInstagram size={32} />
+            </a>            
           </div>
         </div>
       </section>

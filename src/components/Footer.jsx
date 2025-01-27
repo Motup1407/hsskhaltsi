@@ -17,7 +17,7 @@ const Quickmenu=[
           {/* About Us */}
           <div data-aos="fade-up" data-aos-delay="100">
             <h3 className="text-xl font-bold mb-4">About Us</h3>
-            <p className="text-primary-100 justify-center line-clamp-4">
+            <p className="text-primary-100 line-clamp-4">
             Our school is dedicated and committed to providing exceptional service in the field of education, imparting knowledge in academics and extracurricular activities through innovative methodologies and leveraging digital advancements.
             </p>
           </div>

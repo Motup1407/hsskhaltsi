@@ -39,11 +39,11 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <div className="flex items-baseline space-x-4">
               {[
-                { name: 'Home', path: '/' },
-                { name: 'About', path: '/About' },
-                { name: 'Staff', path: '/Staff' },
-                { name: 'Contact', path: '/Contact' },
-                { name: 'Gallery', path: '/Gallery' }
+                { name: 'Home', path: '' },
+                { name: 'About', path: 'About' },
+                { name: 'Staff', path: 'Staff' },
+                { name: 'Contact', path: 'Contact' },
+                { name: 'Gallery', path: 'Gallery' }
               ].map((item) => (
                 <NavLink
                   key={item.name}
