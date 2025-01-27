@@ -13,11 +13,13 @@ import {createBrowserRouter,RouterProvider } from 'react-router-dom'
 const router = createBrowserRouter([
   {
     path: "hsskhaltsi/",
-    element: <Suspense fallback={<loader/>}><App /></Suspense>,
+    element: <Suspense fallback={<div className='min-h-screen min-w-full bg-red-600'>
+      <h1 className='text-green-500 text-2xl font-bold'>WELCOME TO GOVT HIGHER SECONDARY SCHOOL KHALTSI LADAKH...</h1>
+      </div>}><App /></Suspense>,
     //errorElement: <NotFound />, // Handles 404s or route errors
     children: [
       { path: "", element: <Home /> },
-      { path: "about", element: <Suspense fallback={<loader/>}><About /></Suspense>},
+      { path: "about", element: <Suspense fallback='Loading..'><About /></Suspense>},
       { path: "staff", element: <Suspense fallback={<loader/>}><Staff /></Suspense>},
       { path: "contact", element: <Suspense fallback={<loader/>}><Contact /></Suspense>},      
       { path: "gallery", element: <Suspense fallback={<loader/>}><Gallery/></Suspense> }
