@@ -1,26 +1,26 @@
-import React from 'react'
-import { StrictMode } from 'react'
+import React, {lazy,Suspense,StrictMode} from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+const App = lazy(() => import('./App.jsx'))
+import loader from './components/loader.jsx'
 import Home from './Pages/Home.jsx'
-import About from './Pages/About.jsx'
-import Staff from './Pages/Staff.jsx'
-import Contact from './Pages/Contact.jsx'
-import Gallery from './Pages/Gallery.jsx'
+const About = lazy(() => import ('./Pages/About.jsx'));
+const Staff = lazy(() => import ('./Pages/Staff.jsx'));
+const Contact = lazy(() => import ('./Pages/Contact.jsx'));
+const Gallery = lazy(() => import('./Pages/Gallery.jsx'));
 import {createBrowserRouter,RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
     path: "hsskhaltsi/",
-    element: <App/>,
+    element: <Suspense fallback={<loader/>}><App /></Suspense>,
     //errorElement: <NotFound />, // Handles 404s or route errors
     children: [
       { path: "", element: <Home /> },
-      { path: "about", element: <About /> },
-      { path: "staff", element: <Staff /> },
-      { path: "contact", element: <Contact /> },      
-      { path: "gallery", element: <Gallery /> }
+      { path: "about", element: <Suspense fallback={<loader/>}><About /></Suspense>},
+      { path: "staff", element: <Suspense fallback={<loader/>}><Staff /></Suspense>},
+      { path: "contact", element: <Suspense fallback={<loader/>}><Contact /></Suspense>},      
+      { path: "gallery", element: <Suspense fallback={<loader/>}><Gallery/></Suspense> }
     ],
   },
 ]);
