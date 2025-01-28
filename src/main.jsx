@@ -1,35 +1,52 @@
-import React, { lazy, Suspense, StrictMode, useTransition } from "react";
+import React, { lazy, Suspense, StrictMode, useState, useTransition } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-const App = lazy(() => wait(1000).then(() => import("./App.jsx")));
+const App = lazy(() => import("./App.jsx"));
 import logo from "./assets/LOGO.png";
+import WelcomeScreen from './components/WelcomeScreen.jsx';
 const Home = lazy(() => import("./Pages/Home.jsx"));
 const About = lazy(() => import("./Pages/About.jsx"));
 const Staff = lazy(() => import("./Pages/Staff.jsx"));
 const Contact = lazy(() => import("./Pages/Contact.jsx"));
 const Gallery = lazy(() => import("./Pages/Gallery.jsx"));
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+
+const WelcomePage = ({ onProceed }) => {
+  return (
+     <div className="flex h-screen bg-gray-900 justify-items-center items-center z-50">
+          <div className="bg-white rounded-2xl shadow-lg p-6 max-w-nd mx-auto text-center justify-items-center">
+            <img className="flex h-60 w-80" src={logo} alt="schoollogo" />
+            <h1 className="text-green-500 text-2xl font-bold flex">WELCOME</h1>
+            <h6 className="text-gray-900 font-bold">To</h6>
+            <h2 className="text-orange-500 text-2xl font-bold flex">
+              GOVT HIGHER SECONDARY SCHOOL
+            </h2>
+            <h2 className="text-orange-500 text-2xl font-bold flex">KHALTSI</h2>
+          </div>
+        </div>
+  );
+};
+
+// App component to manage the welcome screen and routing
+const App1 = () => {
+  const [showWelcome, setShowWelcome] = useState(true); // Control the welcome screen
+  const [isPending, startTransition] = useTransition(); // Manage transitions
+
+  const handleProceed = () => {
+    startTransition(() => {
+      setShowWelcome(false); // Hide the welcome screen when user proceeds
+    });
+  };
+
+
+
 const router = createBrowserRouter([
   {
     path: "hsskhaltsi/",
     element: (
       <Suspense
-        fallback={
-          <div className="flex h-screen bg-gray-800 justify-items-center items-center">
-            <div className="w-2/3 mx-auto flex-col justify-items-center">
-              <img className="flex h-60 w-80" src={logo} alt="schoollogo" />
-              <h1 className="text-green-500 text-2xl font-bold flex">
-                WELCOME
-              </h1>
-              <h6 className="text-white">To</h6>
-              <h2 className="text-orange-500 text-2xl font-bold flex">
-                GOVT HIGHER SECONDARY SCHOOL
-              </h2>
-              <h2 className="text-orange-500 text-2xl font-bold flex">
-                KHALTSI
-              </h2>
-            </div>
-          </div>
+        fallback={<welcome/>
         }
       >
         <App />
@@ -40,7 +57,7 @@ const router = createBrowserRouter([
       {
         path: "",
         element: (
-          <Suspense fallback="Loading...">
+          <Suspense fallback={<h2>Loading...</h2>}>
             <Home />
           </Suspense>
         ),
@@ -48,7 +65,7 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: (
-          <Suspense fallback="Loading...">
+          <Suspense fallback={<h2>Loading...</h2>}>
             <About />
           </Suspense>
         ),
@@ -56,7 +73,7 @@ const router = createBrowserRouter([
       {
         path: "staff",
         element: (
-          <Suspense fallback="Loading...">
+          <Suspense fallback={<h2>Loading...</h2>}>
             <Staff />
           </Suspense>
         ),
@@ -64,7 +81,7 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: (
-          <Suspense fallback="Loading...">
+          <Suspense fallback={<h2>Loading...</h2>}>
             <Contact />
           </Suspense>
         ),
@@ -72,7 +89,7 @@ const router = createBrowserRouter([
       {
         path: "gallery",
         element: (
-          <Suspense fallback="Loading...">
+          <Suspense fallback={<h2>Loading...</h2>}>
             <Gallery />
           </Suspense>
         ),
@@ -81,13 +98,26 @@ const router = createBrowserRouter([
   },
 ]);
 
+React.useEffect(() => {
+  startTransition(() => {
+    setTimeout(() => {
+      setShowWelcome(false); // Hide welcome page once the app is ready
+    }, 2000); // Automatically proceed once useTransition finishes
+  });
+}, []);
+return (
+  <>
+    {showWelcome || isPending? (
+      <WelcomePage onProceed={handleProceed} />
+    ) : (
+      <RouterProvider router={router} />
+    )}
+  </>
+);
+};
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <App1 />
   </StrictMode>
 );
-function wait(time) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, time);
-  });
-}

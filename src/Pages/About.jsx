@@ -13,6 +13,7 @@ const About = () => {
                 src={schoolphoto} 
                 alt="Team collaboration" 
                 className="rounded-lg shadow-2xl fit-crop h-50-" height='500'
+                loading='lazy'
               />
               <div className="absolute -bottom-6 -right-6 bg-primary-600 text-white p-8 rounded-lg hidden md:block">
                 <p className="text-4xl font-bold">75+</p>

@@ -4,7 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Noty from "../components/Noty";
 import Enroll from "../components/Enroll";
-//import About from './About.jsx'
 const About = lazy(() => import("./About.jsx"));
 const Gallery = lazy(() => import("../components/galleryCom"));
 const Assocatives = lazy(() => import("../components/assocatives"));
