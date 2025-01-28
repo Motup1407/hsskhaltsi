@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, StrictMode, useState, useTransition } from "react";
+import React, { lazy, Suspense, StrictMode, useState, useTransition, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 const App = lazy(() => import("./App.jsx"));
@@ -12,7 +12,7 @@ const Gallery = lazy(() => import("./Pages/Gallery.jsx"));
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 
-const WelcomePage = ({ onProceed }) => {
+const WelcomePage = () => {
   return (
      <div className="flex h-screen bg-gray-900 justify-items-center items-center z-50">
           <div className="bg-white rounded-2xl shadow-lg p-6 max-w-nd mx-auto text-center justify-items-center">
@@ -33,11 +33,6 @@ const App1 = () => {
   const [showWelcome, setShowWelcome] = useState(true); // Control the welcome screen
   const [isPending, startTransition] = useTransition(); // Manage transitions
 
-  const handleProceed = () => {
-    startTransition(() => {
-      setShowWelcome(false); // Hide the welcome screen when user proceeds
-    });
-  };
 
 
 
@@ -98,7 +93,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-React.useEffect(() => {
+useEffect(() => {
   startTransition(() => {
     setTimeout(() => {
       setShowWelcome(false); // Hide welcome page once the app is ready
@@ -108,7 +103,7 @@ React.useEffect(() => {
 return (
   <>
     {showWelcome || isPending? (
-      <WelcomePage onProceed={handleProceed} />
+      <WelcomePage/>
     ) : (
       <RouterProvider router={router} />
     )}
