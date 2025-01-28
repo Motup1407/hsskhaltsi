@@ -1,15 +1,14 @@
-import React, { lazy, Suspense, StrictMode } from "react";
+import React, { lazy, Suspense, StrictMode, useTransition } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-const App = lazy(() => import("./App.jsx"));
+const App = lazy(() => wait(1000).then(() => import("./App.jsx")));
 import logo from "./assets/LOGO.png";
-import Home from "./Pages/Home.jsx";
+const Home = lazy(() => import("./Pages/Home.jsx"));
 const About = lazy(() => import("./Pages/About.jsx"));
 const Staff = lazy(() => import("./Pages/Staff.jsx"));
 const Contact = lazy(() => import("./Pages/Contact.jsx"));
 const Gallery = lazy(() => import("./Pages/Gallery.jsx"));
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-
 const router = createBrowserRouter([
   {
     path: "hsskhaltsi/",
@@ -23,7 +22,12 @@ const router = createBrowserRouter([
                 WELCOME
               </h1>
               <h6 className="text-white">To</h6>
-              <h2 className="text-orange-500 text-2xl font-bold flex">GOVT HIGHER SECONDARY SCHOOL KHALTSI LADAKH</h2>
+              <h2 className="text-orange-500 text-2xl font-bold flex">
+                GOVT HIGHER SECONDARY SCHOOL
+              </h2>
+              <h2 className="text-orange-500 text-2xl font-bold flex">
+                KHALTSI
+              </h2>
             </div>
           </div>
         }
@@ -33,7 +37,14 @@ const router = createBrowserRouter([
     ),
     //errorElement: <NotFound />, // Handles 404s or route errors
     children: [
-      { path: "", element: <Home /> },
+      {
+        path: "",
+        element: (
+          <Suspense fallback="Loading...">
+            <Home />
+          </Suspense>
+        ),
+      },
       {
         path: "about",
         element: (
@@ -75,3 +86,8 @@ createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </StrictMode>
 );
+function wait(time) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+}
