@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-  console.log(location)
+ // console.log('location:',location)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,8 +16,8 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const isHomePage = location.pathname;
+const isHomePage = location.pathname ==='/hsskhaltsi' ||location.pathname ==='/hsskhaltsi/';
+  //console.log('isHome:',isHomePage);
   const navBgTransparent = isHomePage && !isScrolled;
 
   return (
@@ -40,7 +40,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <div className="flex items-baseline space-x-4">
               {[
-                { name: 'Home', path: '/' },
+                { name: 'Home', path: '' },
                 { name: 'About', path: 'About' },
                 { name: 'Staff', path: 'Staff' },
                 { name: 'Contact', path: 'Contact' },
