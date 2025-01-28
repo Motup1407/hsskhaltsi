@@ -1,0 +1,1 @@
+.marquee{display:inline-block;animation:scroll-vertical 20s linear infinite}@keyframes scroll-vertical{0%{transform:translateY(80%)}to{transform:translateY(-100%)}}
