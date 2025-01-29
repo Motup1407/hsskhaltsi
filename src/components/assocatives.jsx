@@ -5,6 +5,7 @@ const assocatives = () => {
         {title:'CBSE',path:'/hsskhaltsi/assets/CBSE-Logo.png'},
         {title:'NCERT',path:'/hsskhaltsi/assets/NCERT-logo.png'},,
         {title:'NCC',path:'/hsskhaltsi/assets/ncc-logo.png'},
+        {title:'NSP',path:'/hsskhaltsi/assets/nsp.png'},
         {title:'Digital-india',path:'/hsskhaltsi/assets/Digital-india.png'},
         {title:'NSDC',path:'/hsskhaltsi/assets/skill.jpg'},
         {title:'My Gov',path:'/hsskhaltsi/assets/mygov.png'}
@@ -14,7 +15,7 @@ const assocatives = () => {
   return (
     <>
       <div className="w-full bg-white p-20">
-      <h2 className="text-3xl font-bold mb-8 text-center">Our Assocatives</h2>
+      <h2 className="text-3xl font-bold mb-8 text-center text-primary-900">Our Assocatives</h2>
       <div className="mx-auto flex justify-evenly gap-1 items-center sm:w-screen">
       {logos.map((items) => (
         <div className="p-4 flex-col justify-items-center">

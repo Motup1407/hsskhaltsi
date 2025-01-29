@@ -11,7 +11,7 @@ const Contact = lazy(() => import("./Pages/Contact.jsx"));
 const Gallery = lazy(() => import("./Pages/Gallery.jsx"));
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-
+/*
 const WelcomePage = () => {
   return (
      <div className="flex h-screen bg-gray-900 justify-items-center items-center z-50">
@@ -26,7 +26,7 @@ const WelcomePage = () => {
           </div>
         </div>
   );
-};
+};*/
 
 // App component to manage the welcome screen and routing
 const App1 = () => {
@@ -97,13 +97,13 @@ useEffect(() => {
   startTransition(() => {
     setTimeout(() => {
       setShowWelcome(false); // Hide welcome page once the app is ready
-    }, 2000); // Automatically proceed once useTransition finishes
+    }, 0); // Automatically proceed once useTransition finishes
   });
 }, []);
 return (
   <>
     {showWelcome || isPending? (
-      <WelcomePage/>
+      <WelcomeScreen/>
     ) : (
       <RouterProvider router={router} />
     )}

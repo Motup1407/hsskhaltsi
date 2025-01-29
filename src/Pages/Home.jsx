@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Noty from "../components/Noty";
 import Enroll from "../components/Enroll";
-const About = lazy(() => import("./About.jsx"));
+const AboutComp = lazy(() => import("../components/AboutComp"));
 const Gallery = lazy(() => import("../components/galleryCom"));
 const Assocatives = lazy(() => import("../components/assocatives"));
 import HeroCarousel from "../components/HeroCarousel";
@@ -52,7 +52,7 @@ const Home = () => {
         {/* Gallery Section */}
         <Gallery />
         {/* About Us Section */}
-        <About />
+        <AboutComp />
       </Suspense>
 
       {/* Social Media Section */}
