@@ -47,12 +47,12 @@ const Home = () => {
       <Suspense fallback="Loading...">
         <Noty />
         <Enroll />
-        {/* Categories Section */}
+         {/* About Us Section */}
+         <AboutComp />
 
         {/* Gallery Section */}
         <Gallery />
-        {/* About Us Section */}
-        <AboutComp />
+       
       </Suspense>
 
       {/* Social Media Section */}

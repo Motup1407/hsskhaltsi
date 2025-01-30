@@ -11,25 +11,8 @@ const Contact = lazy(() => import("./Pages/Contact.jsx"));
 const Gallery = lazy(() => import("./Pages/Gallery.jsx"));
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-/*
-const WelcomePage = () => {
-  return (
-     <div className="flex h-screen bg-gray-900 justify-items-center items-center z-50">
-          <div className="bg-white rounded-2xl shadow-lg p-6 max-w-nd mx-auto text-center justify-items-center">
-            <img className="flex h-60 w-80" src={logo} alt="schoollogo" />
-            <h1 className="text-green-500 text-2xl font-bold flex">WELCOME</h1>
-            <h6 className="text-gray-900 font-bold">To</h6>
-            <h2 className="text-orange-500 text-2xl font-bold flex">
-              GOVT HIGHER SECONDARY SCHOOL
-            </h2>
-            <h2 className="text-orange-500 text-2xl font-bold flex">KHALTSI</h2>
-          </div>
-        </div>
-  );
-};*/
-
 // App component to manage the welcome screen and routing
-const App1 = () => {
+const AppLazy = () => {
   const [showWelcome, setShowWelcome] = useState(true); // Control the welcome screen
   const [isPending, startTransition] = useTransition(); // Manage transitions
 
@@ -97,7 +80,7 @@ useEffect(() => {
   startTransition(() => {
     setTimeout(() => {
       setShowWelcome(false); // Hide welcome page once the app is ready
-    }, 0); // Automatically proceed once useTransition finishes
+    }, 1000); // Automatically proceed once useTransition finishes
   });
 }, []);
 return (
@@ -113,6 +96,6 @@ return (
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App1 />
+    <AppLazy />
   </StrictMode>
 );

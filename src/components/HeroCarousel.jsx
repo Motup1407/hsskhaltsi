@@ -6,29 +6,29 @@ const HeroCarousel = () => {
 
     const heroSlides = [
         {
-          image: '/hsskhaltsi/assets/hero6.jpg',
+          image: '/hsskhaltsi/assets/hero5.jpg',
           title: 'Welcome to Our School',
-          subtitle: 'Discover amazing experiences with us'
+          subtitle: 'We inspire students to discover their potential, dream, and achieve greatness through knowledge.'
+        },
+        {
+          image: '/hsskhaltsi/assets/hero6.jpg',
+          title: 'Innovative Solutions',
+          subtitle: 'Preparing for the future with Advanced digital learning tools'
         },
         {
           image: '/hsskhaltsi/assets/hero2.jpg',
-          title: 'Innovative Solutions',
-          subtitle: 'Preparing for the future'
-        },
-        {
-          image: '/hsskhaltsi/assets/hero4.jpg',
           title: 'Dedicated and Qualified Teachers',
           subtitle: 'Committed to provide best knowledge and ethics'
         },
         {
-          image: '/hsskhaltsi/assets/hero3.jpg',
+          image: '/hsskhaltsi/assets/hero4.jpg',
           title: 'Residential Hostel Facilities',
           subtitle: 'Providing free residential hostel'
         },
         {
-          image: '/hsskhaltsi/assets/hero5.jpg',
-          title: 'Dedicated and Qualified Teachers',
-          subtitle: 'Committed to provide best knowledge and ethics'
+          image: '/hsskhaltsi/assets/hero3.jpg',
+          title: 'Quality Education',
+          subtitle: 'Quality education aligned with CBSE standards'
         },
         {
           image: '/hsskhaltsi/assets/hero1.jpg',

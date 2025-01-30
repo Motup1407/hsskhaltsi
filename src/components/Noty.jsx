@@ -11,11 +11,9 @@ const Noty = () => {
   const [isPaused2,setIsPaused2]=useState(false);
   
   const News=[
-    {title:'News1',path:''},
-    {title:'News2',path:''},
-    {title:'News3',path:''},
-    {title:'News3',path:''},
-    {title:'News3',path:''}
+    {title:'Pariksha Pe Charcha 2025',path:'https://innovateindia1.mygov.in/'},
+    {title:'Filling Annual Property Return (PRs)',path:'https://ehrmsladakh.in/'},
+    {title:'Conduct of Extra Class for class X & XII.',path:''}
 ];
 const Notices=[
   {title:'Implementation of APAAR ID as the Primary Identifier for students of CBSE Affiliated Schools.',path:'https://www.cbse.gov.in/cbsenew/documents/Circular_Implementation_APAAR_ID_24012025.pdf'},
@@ -25,6 +23,7 @@ const Notices=[
   {title:'Admission Open for Session 2025 (Class 9th & 11th)',path:''}
 ];
 const Events=[
+  {title:'Republic Day Celebration.',path:''},
   {title:'Teachers Day Celebration.',path:''},
   {title:'Childrens Day Celebration.',path:''},
   {title:'School Tour to Zanskar.',path:''}
@@ -63,7 +62,7 @@ const Events=[
         <div className="bg-orange-500 text-white shadow-lg rounded-lg">
           <div className="bg-orange-300 text-black p-2 rounded-t-lg flex items-center gap-2">
           <FaBell size={20} />
-            <h2 className="text-xl font-semibold">Notifications (CBSE/School)</h2>
+            <h2 className="text-xl font-semibold">Notifications (CBSE)</h2>
           </div>
           <div className="">
           <div className={`overflow-hidden h-56 ${isPaused1 ? 'active:cursor-grabbing' : ''}`}
