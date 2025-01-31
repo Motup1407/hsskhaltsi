@@ -6,7 +6,7 @@ const AboutComp = () => {
     {/* About Us */}
     <section className="w-screen justify-items-center">
         <div className='w-4/5 text-center py-20'>
-        <h1 className='text-primary-900 text-3xl font-bold'>About US</h1>
+        <h1 className='text-primary-900 text-3xl font-bold mb-6'>About US</h1>
         <p className="text-xl text-gray-700 ">
             Our school is a Government-run institution dedicated to providing
             high-quality and accessible education to all.
