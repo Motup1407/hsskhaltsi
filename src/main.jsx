@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     path: "hsskhaltsi/",
     element: (
       <Suspense
-        fallback={<welcome/>
+        fallback={<WelcomeScreen/>
         }
       >
         <App />
@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       {
         path: "",
         element: (
-          <Suspense fallback={<h2>Loading...</h2>}>
+          <Suspense fallback={<WelcomeScreen/>}>
             <Home />
           </Suspense>
         ),
@@ -43,7 +43,7 @@ const router = createBrowserRouter([
       {
         path: "About",
         element: (
-          <Suspense fallback={<h2>Loading...</h2>}>
+          <Suspense fallback={<WelcomeScreen/>}>
             <About />
           </Suspense>
         ),
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
       {
         path: "Staff",
         element: (
-          <Suspense fallback={<h2>Loading...</h2>}>
+          <Suspense fallback={<WelcomeScreen/>}>
             <Staff />
           </Suspense>
         ),
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       {
         path: "Contact",
         element: (
-          <Suspense fallback={<h2>Loading...</h2>}>
+          <Suspense fallback={<WelcomeScreen/>}>
             <Contact />
           </Suspense>
         ),
@@ -67,7 +67,7 @@ const router = createBrowserRouter([
       {
         path: "Gallery",
         element: (
-          <Suspense fallback={<h2>Loading...</h2>}>
+          <Suspense fallback={<WelcomeScreen/>}>
             <Gallery />
           </Suspense>
         ),
