@@ -92,7 +92,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Assocatives />
+     { /*<Assocatives />*/}
     </>
   );
 };

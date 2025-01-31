@@ -91,10 +91,10 @@ const isHomePage = location.pathname ==='/hsskhaltsi' ||location.pathname ==='/h
         <div className="md:hidden bg-white">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {[
-              { name: 'Home', path: '/' },
-              { name: 'About', path: '/About' },
-              { name: 'Staff', path: '/Staff' },
-              { name: 'Contact', path: '/Contact' }
+              { name: 'Home', path: '' },
+              { name: 'About', path: 'About' },
+              { name: 'Staff', path: 'Staff' },
+              { name: 'Contact', path: 'Contact' }
             ].map((item) => (
               <NavLink
                 key={item.name}
