@@ -16,8 +16,8 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-const isHomePage = location.pathname ==='/hsskhaltsi' ||location.pathname ==='/hsskhaltsi/';
-  //console.log('isHome:',isHomePage);
+const isHomePage = (location.pathname ==='/hsskhaltsi' || location.pathname ==='/hsskhaltsi/');
+  //console.log('location path:',location);
   const navBgTransparent = isHomePage && !isScrolled;
 
   return (
@@ -48,13 +48,12 @@ const isHomePage = location.pathname ==='/hsskhaltsi' ||location.pathname ==='/h
               ].map((item) => (
                 <NavLink
                   key={item.name}
-                  to={item.path}
-                  className={({ isActive }) => `px-3 py-2 rounded-md text-md font-medium transition-colors
+                 strict='true' to={item.path}
+                  className={({ isActive }) => `px-3 py-2 text-md font-medium transition-colors
                     ${navBgTransparent? 'text-white hover:text-primary-400 hover:underline'
                       : 'text-primary-900 hover:text-black hover:underline'
                     }
-                    ${isActive? 'bg-primary-800 bg-opacity-10 font-semibold' : ''}
-                  `}
+                    ${isActive? 'bg-primary-800 bg-opacity-10 font-semibold rounded-md ' : ''}`}
                 >
                   {item.name}
                 </NavLink>
@@ -111,9 +110,11 @@ const isHomePage = location.pathname ==='/hsskhaltsi' ||location.pathname ==='/h
             ))}
             {/* Mobile Registration Number */}
             <div className="px-3 py-2 bg-gray-900 bg-opacity-20 rounded-lg mx-2">
-              <div className="flex flex-col">
-                <span className="text-xs text-gray-600">Registration Number</span>
-                <span className="font-semibold text-primary-800">ISO 9001:2015</span>
+              
+              <div className='flex flex-col item-end'>
+                <span className='font-bold'>CBSE Affiliation No: 3720143</span>
+                <span className='font-bold'>School Code: 24496</span>
+              
               </div>
             </div>
           </div>

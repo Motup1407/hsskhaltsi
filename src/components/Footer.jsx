@@ -4,11 +4,11 @@ import { NavLink,Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
 const Quickmenu=[
-  {name:'Home', path:"/hsskhaltsi"},
-  {name:'About', path:"/hsskhaltsi/About"},
-  {name:'Staff', path:"/hsskhaltsi/Staff"},
-  {name:'Contact', path:"/hsskhaltsi/Contact"},  
-  {name:'Gallery', path:"/hsskhaltsi/Gallery"},
+  {id: 1,name:'Home', path:"/hsskhaltsi"},
+  {id:2,name:'About', path:"/hsskhaltsi/About"},
+  {id:3,name:'Staff', path:"/hsskhaltsi/Staff"},
+  {id:4,name:'Contact', path:"/hsskhaltsi/Contact"},  
+  {id:5,name:'Gallery', path:"/hsskhaltsi/Gallery"},
 ];
 
   return (
@@ -28,9 +28,8 @@ const Quickmenu=[
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               {Quickmenu.map(item => (
-                <li>
-                  <NavLink key={item.name}
-                  to={item.path} className="text-primary-100 hover:text-white transition-colors">
+                <li key={item.id}>
+                  <NavLink to={item.path} className="text-primary-100 hover:text-white transition-colors">
                   {item.name}
                   </NavLink>                  
                   </li>

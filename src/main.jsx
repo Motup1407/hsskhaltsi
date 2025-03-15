@@ -80,7 +80,7 @@ useEffect(() => {
   startTransition(() => {
     setTimeout(() => {
       setShowWelcome(false); // Hide welcome page once the app is ready
-    }, 1000); // Automatically proceed once useTransition finishes
+    }, 2000); // Automatically proceed once useTransition finishes
   });
 }, []);
 return (

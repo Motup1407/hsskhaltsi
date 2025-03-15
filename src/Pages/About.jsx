@@ -58,15 +58,18 @@ function About() {
     "A Prestigious Government School",
     "CBSE Curriculum",
     "Government-backed Infrastructure",
-    "Modern Labs",
-    "Skill-Based Learning",
+    "Free Residential Hostel with Winter-Ready rooms",
+    "Modern Labs like ICT & Atal Tinkering",
+    "Skill-Based Learning under Vocational Education",
     "Large Campus with the Best Playground",
+    "Imparting discipline & moral through NCC",
+    "Scholarship under Govt Schemes",
+    "Financial support for poor and EWS students",
     "Holistic Development",
     "Community Engagement",
     "Moral & Ethical Education",
-    "Educational Accessibility",
-    "Free Residential Hostel",
-    "Winter-Ready Hostel",
+    "Educational Accessibility"
+   
   ];
 
   const contactInfo = {
@@ -243,6 +246,17 @@ function About() {
                   </h3>
                   <p className="text-gray-600">
                     Well equiped Courts for outdoor sports like volleyball, Football, Handball and a running track. Aslo equirement for indoor sports like Table Tennis, Chess, Carrom Board, etc. 
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <Trophy className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                <div>
+                  <h3 className="font-bold text-gray-900">
+                    Nation Cadet Corps (NCC)
+                  </h3>
+                  <p className="text-gray-600">
+                  Developing Character,comradeship, discipline amongst the students as well as trained and motivated youth with leadership qualities in all walks of life that helps then to take Up a Career in the Armed Forces. 
                   </p>
                 </div>
               </div>
