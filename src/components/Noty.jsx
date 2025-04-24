@@ -11,11 +11,13 @@ const Noty = () => {
   const [isPaused2,setIsPaused2]=useState(false);
   
   const News=[
+    {title:'Extension of Winter Vacation.',path:''},
     {title:'Pariksha Pe Charcha 2025',path:'https://innovateindia1.mygov.in/'},
     {title:'Filling Annual Property Return (PRs)',path:'https://ehrmsladakh.in/'},
     {title:'Conduct of Extra Class for class X & XII.',path:''}
 ];
 const Notices=[
+  {title:'Admission Open for Session 2025 (Class 11th) Start Date:21st April End:15th May 2025',path:''},
   {title:'Implementation of APAAR ID as the Primary Identifier for students of CBSE Affiliated Schools.',path:'https://www.cbse.gov.in/cbsenew/documents/Circular_Implementation_APAAR_ID_24012025.pdf'},
   {title:'Making class X/XII students aware about examination ethics-reg.',path:'https://www.cbse.gov.in/cbsenew/documents/Making_Examination_Class_X%20_XII_23012025.pdf'},
   {title:'Conduct of Practical Examinations/Project/Internal Assessment Classes X & XII 2024-25',path:'https://www.cbse.gov.in/cbsenew/documents/Practical_Exam_Reminder_I_31122024.pdf'},
