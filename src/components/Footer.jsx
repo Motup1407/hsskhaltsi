@@ -80,7 +80,7 @@ const Quickmenu=[
             © {new Date().getFullYear()} Govt Higher Secondary School Khaltsi. All rights reserved.
           </p>
           <p className="text-primary-100">
-            Designed & Developed by <a href='https://github.com/Motup1407' className='text-yellow-500 font-semibold'>MotupTech Solutions Ladakh</a>.
+            Designed & Developed by <a href='https://github.com/Motup1407' className='text-yellow-500 font-semibold' target='_blank'>MotupTech Solutions Ladakh</a>.
           </p>
         </div>
       </div>
